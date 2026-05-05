@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad | Portfolio</title>
+    <meta name="description" content="Personal portfolio of Muhammad, showcasing experience and skills.">
+    <!-- Google Fonts for typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">MUHAMMAD Raza.</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button id="theme-toggle" class="luxury-switch" aria-label="Toggle Dark Mode">
+                <div class="luxury-track">
+                    <div class="luxury-orb">
+                        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#121212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </div>
+                </div>
+            </button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero section">
+            <div class="hero-content fade-in">
+                <h1 class="title">Elegance in <br>Every Detail.</h1>
+                <p class="subtitle">I am Muhammad. Passionate about crafting exceptional experiences.</p>
+                <a href="#about" class="btn btn-outline">Discover More</a>
+            </div>
+        </section>
+
+        <section id="about" class="about section">
+            <div class="container">
+                <h2 class="section-title reveal">About Me</h2>
+                <div class="about-grid">
+                    <div class="about-text reveal">
+                        <p>With a passion for excellence and a commitment to quality, I am Muhammad Raza. My approach is rooted in simplicity, functionality, and aesthetic perfection, creating results that speak for themselves.</p>
+                    </div>
+                    <div class="about-data reveal">
+                        <div class="about-details">
+                            <div class="detail-item slide-hover">
+                                <h3>Name</h3>
+                                <p class="slide-content">Muhammad Raza</p>
+                            </div>
+                            <div class="detail-item slide-hover">
+                                <h3>Qualification</h3>
+                                <p class="slide-content">Matrikes</p>
+                            </div>
+                            <div class="detail-item slide-hover">
+                                <h3>Age</h3>
+                                <p class="slide-content">21 Years</p>
+                            </div>
+                            <div class="detail-item slide-hover">
+                                <h3>Height</h3>
+                                <p class="slide-content">6' 10"</p>
+                            </div>
+                        </div>
+                        
+                        <div class="about-chart">
+                            <h3>Visual Overview</h3>
+                            <div class="chart-item">
+                                <div class="chart-label">Age (21)</div>
+                                <div class="chart-bar"><div class="chart-fill" data-width="21%"></div></div>
+                            </div>
+                            <div class="chart-item">
+                                <div class="chart-label">Height (6'10")</div>
+                                <div class="chart-bar"><div class="chart-fill" data-width="82%"></div></div> <!-- Approx relative scale -->
+                            </div>
+                            <div class="chart-item">
+                                <div class="chart-label">Qualification</div>
+                                <div class="chart-bar"><div class="chart-fill" data-width="100%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact section">
+            <div class="container">
+                <h2 class="section-title reveal">Get in Touch</h2>
+                <div class="form-container reveal">
+                    <form id="contact-form" action="mailto:your.email@example.com" method="POST" enctype="text/plain">
+                        <div class="input-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+                        <div class="input-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+                        <div class="input-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required
+                                placeholder="How can I help you?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Muhammad. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
