@@ -1,36 +1,33 @@
 // script.js
-document.addEventListener('DOMContentLoaded', () => {
+$(document).ready(function() {
     
     // --- Navbar Scroll Effect ---
-    const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
+    const $navbar = $('.navbar');
+    $(window).on('scroll', function() {
+        if ($(this).scrollTop() > 50) {
+            $navbar.addClass('scrolled');
         } else {
-            navbar.classList.remove('scrolled');
+            $navbar.removeClass('scrolled');
         }
     });
 
     // --- Mobile Menu Toggle ---
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+    const $hamburger = $('.hamburger');
+    const $navLinks = $('.nav-links');
     
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navLinks.classList.toggle('active');
+    $hamburger.on('click', function() {
+        $(this).toggleClass('active');
+        $navLinks.toggleClass('active');
     });
 
     // Close mobile menu when a link is clicked
-    document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navLinks.classList.remove('active');
-        });
+    $('.nav-links a').on('click', function() {
+        $hamburger.removeClass('active');
+        $navLinks.removeClass('active');
     });
 
     // --- Scroll Reveal Animations ---
-    const revealElements = document.querySelectorAll('.reveal');
-    const chartFills = document.querySelectorAll('.chart-fill');
+    const revealElements = $('.reveal').get(); // Convert to array for IntersectionObserver
 
     const revealOptions = {
         threshold: 0.1,
@@ -42,13 +39,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!entry.isIntersecting) {
                 return;
             } else {
-                entry.target.classList.add('active');
+                const $target = $(entry.target);
+                $target.addClass('active');
                 
                 // If the target contains charts, animate them
-                const fillsInTarget = entry.target.querySelectorAll('.chart-fill');
-                fillsInTarget.forEach(fill => {
-                    const width = fill.getAttribute('data-width');
-                    fill.style.width = width;
+                $target.find('.chart-fill').each(function() {
+                    const width = $(this).attr('data-width');
+                    $(this).css('width', width);
                 });
 
                 observer.unobserve(entry.target);
@@ -61,23 +58,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- Theme Toggle Logic ---
-    const themeToggle = document.getElementById('theme-toggle');
-    if(themeToggle) {
+    const $themeToggle = $('#theme-toggle');
+    if ($themeToggle.length) {
         // Check for saved theme preference or use system preference
         const savedTheme = localStorage.getItem('theme');
         const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
         
         if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-            document.body.classList.add('dark-mode');
-            themeToggle.textContent = '☀️';
+            $('body').addClass('dark-mode');
         }
 
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            const isDarkMode = document.body.classList.contains('dark-mode');
-            
-            // Update icon
-            themeToggle.textContent = isDarkMode ? '☀️' : '🌙';
+        $themeToggle.on('click', function() {
+            $('body').toggleClass('dark-mode');
+            const isDarkMode = $('body').hasClass('dark-mode');
             
             // Save preference
             localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
@@ -85,18 +78,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Form Handling ---
-    const contactForm = document.getElementById('contact-form');
-    if(contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            // Because we're using mailto for now, the default behavior will open the email client.
-            // If using web3forms later via fetch, you would e.preventDefault() and do fetch here.
+    const $contactForm = $('#contact-form');
+    if ($contactForm.length) {
+        $contactForm.on('submit', function(e) {
+            // Provide visual feedback after clicking send
+            const $btn = $(this).find('button[type="submit"]');
+            const originalText = $btn.text();
+            $btn.text('Opening Mail Client...');
             
-            // Optional: Provide some visual feedback after clicking send
-            const btn = contactForm.querySelector('button[type="submit"]');
-            const originalText = btn.textContent;
-            btn.textContent = 'Opening Mail Client...';
-            setTimeout(() => {
-                btn.textContent = originalText;
+            setTimeout(function() {
+                $btn.text(originalText);
             }, 3000);
         });
     }

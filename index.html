@@ -12,21 +12,50 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
         rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <nav class="navbar">
-        <div class="logo">MUHAMMAD Raza. IT Developer</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div class="container-fluid px-lg-5">
+            <div class="logo">MUHAMMAD Raza. IT Developer</div>
+            <ul class="nav-links mb-0">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact Form</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="luxury-switch" aria-label="Toggle Theme">
+                    <div class="luxury-track">
+                        <div class="luxury-orb">
+                            <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="5"></circle>
+                                <line x1="12" y1="1" x2="12" y2="3"></line>
+                                <line x1="12" y1="21" x2="12" y2="23"></line>
+                                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                                <line x1="1" y1="12" x2="3" y2="12"></line>
+                                <line x1="21" y1="12" x2="23" y2="12"></line>
+                                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                            </svg>
+                            <svg class="moon-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </div>
     </nav>
 
@@ -43,45 +72,53 @@
         <section id="about" class="about section">
             <div class="container">
                 <h2 class="section-title reveal">About Me</h2>
-                <div class="about-grid">
-                    <div class="about-text reveal">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0 about-text reveal">
                         <p>With a passion for excellence and a commitment to quality, I am Muhammad Raza. My approach is
                             rooted in simplicity, functionality, and aesthetic perfection, creating results that speak
                             for themselves.</p>
                     </div>
-                    <div class="about-data reveal">
-                        <div class="about-details">
-                            <div class="detail-item slide-hover">
-                                <h3>Name</h3>
-                                <p class="slide-content">Muhammad Raza</p>
+                    <div class="col-lg-6 about-data reveal">
+                        <div class="row g-4 about-details mb-5">
+                            <div class="col-sm-6">
+                                <div class="detail-item slide-hover">
+                                    <h3>Name</h3>
+                                    <p class="slide-content">Muhammad Raza</p>
+                                </div>
                             </div>
-                            <div class="detail-item slide-hover">
-                                <h3>Qualification</h3>
-                                <p class="slide-content">INTERMEDIATE</p>
+                            <div class="col-sm-6">
+                                <div class="detail-item slide-hover">
+                                    <h3>Qualification</h3>
+                                    <p class="slide-content">INTERMEDIATE</p>
+                                </div>
                             </div>
-                            <div class="detail-item slide-hover">
-                                <h3>Age</h3>
-                                <p class="slide-content">21 Years</p>
+                            <div class="col-sm-6">
+                                <div class="detail-item slide-hover">
+                                    <h3>Age</h3>
+                                    <p class="slide-content">21 Years</p>
+                                </div>
                             </div>
-                            <div class="detail-item slide-hover">
-                                <h3>Height</h3>
-                                <p class="slide-content">6' 10"</p>
+                            <div class="col-sm-6">
+                                <div class="detail-item slide-hover">
+                                    <h3>Height</h3>
+                                    <p class="slide-content">6' 10"</p>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="about-chart">
+                        <div class="about-chart p-4">
                             <h3>Visual Overview</h3>
-                            <div class="chart-item">
+                            <div class="chart-item mb-4">
                                 <div class="chart-label">Age (21)</div>
                                 <div class="chart-bar">
                                     <div class="chart-fill" data-width="21%"></div>
                                 </div>
                             </div>
-                            <div class="chart-item">
+                            <div class="chart-item mb-4">
                                 <div class="chart-label">Height (6'10")</div>
                                 <div class="chart-bar">
                                     <div class="chart-fill" data-width="82%"></div>
-                                </div> <!-- Approx relative scale -->
+                                </div>
                             </div>
                             <div class="chart-item">
                                 <div class="chart-label">Qualification</div>
@@ -95,26 +132,173 @@
             </div>
         </section>
 
+        <section id="projects" class="projects section">
+            <div class="container-fluid px-lg-5">
+                <h2 class="section-title reveal">My Projects</h2>
+                <div class="row g-4 reveal">
+                    <!-- Project 1: Nike -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="project-card glass-effect">
+                            <div class="project-image">
+                                <img src="nike-thumbnail.png" alt="Nike Shoe Store Project">
+                                <div class="project-category">E-Commerce</div>
+                            </div>
+                            <div class="project-info">
+                                <h3>Nike Shoe Store</h3>
+                                <p>A modern, interactive Nike shoe website featuring smooth animations and premium design.</p>
+                                <a href="https://raza332.github.io/nike/" target="_blank" rel="noopener noreferrer" class="project-link">
+                                    View Project 
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="project-card glass-effect">
+                            <div class="project-image">
+                                <div class="placeholder-gradient" style="background: linear-gradient(135deg, #2c3e50, #000000); width: 100%; height: 100%;"></div>
+                                <div class="project-category">Branding</div>
+                            </div>
+                            <div class="project-info">
+                                <h3>Luxury Watch</h3>
+                                <p>Premium branding and landing page for a high-end luxury watch collection.</p>
+                                <a href="#" class="project-link">
+                                    View Project 
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="project-card glass-effect">
+                            <div class="project-image">
+                                <div class="placeholder-gradient" style="background: linear-gradient(135deg, #1a1a1a, #434343); width: 100%; height: 100%;"></div>
+                                <div class="project-category">UI/UX</div>
+                            </div>
+                            <div class="project-info">
+                                <h3>Coffee Shop</h3>
+                                <p>Minimalist digital experience for a modern boutique coffee roastery.</p>
+                                <a href="#" class="project-link">
+                                    View Project 
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 4 -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="project-card glass-effect">
+                            <div class="project-image">
+                                <div class="placeholder-gradient" style="background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); width: 100%; height: 100%;"></div>
+                                <div class="project-category">Portfolio</div>
+                            </div>
+                            <div class="project-info">
+                                <h3>Digital Agency</h3>
+                                <p>Creative portfolio showcase for a multi-disciplinary digital agency.</p>
+                                <a href="#" class="project-link">
+                                    View Project 
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 5 -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="project-card glass-effect">
+                            <div class="project-image">
+                                <div class="placeholder-gradient" style="background: linear-gradient(135deg, #141e30, #243b55); width: 100%; height: 100%;"></div>
+                                <div class="project-category">Interior</div>
+                            </div>
+                            <div class="project-info">
+                                <h3>Modern Design</h3>
+                                <p>Clean and sophisticated website for an architectural interior design firm.</p>
+                                <a href="#" class="project-link">
+                                    View Project 
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 6 -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="project-card glass-effect">
+                            <div class="project-image">
+                                <div class="placeholder-gradient" style="background: linear-gradient(135deg, #000000, #434343); width: 100%; height: 100%;"></div>
+                                <div class="project-category">Real Estate</div>
+                            </div>
+                            <div class="project-info">
+                                <h3>Elite Properties</h3>
+                                <p>Luxury real estate platform for exclusive high-end property listings.</p>
+                                <a href="#" class="project-link">
+                                    View Project 
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 7 -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="project-card glass-effect">
+                            <div class="project-image">
+                                <div class="placeholder-gradient" style="background: linear-gradient(135deg, #1e1e1e, #111111); width: 100%; height: 100%;"></div>
+                                <div class="project-category">Travel</div>
+                            </div>
+                            <div class="project-info">
+                                <h3>Voyage Luxe</h3>
+                                <p>Bespoke travel planning website for ultra-luxury worldwide destinations.</p>
+                                <a href="#" class="project-link">
+                                    View Project 
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 8 -->
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="project-card glass-effect">
+                            <div class="project-image">
+                                <div class="placeholder-gradient" style="background: linear-gradient(135deg, #000000, #D4AF37); width: 100%; height: 100%; opacity: 0.8;"></div>
+                                <div class="project-category">Fashion</div>
+                            </div>
+                            <div class="project-info">
+                                <h3>Aura Couture</h3>
+                                <p>High-end fashion brand presentation with an emphasis on minimalist luxury.</p>
+                                <a href="#" class="project-link">
+                                    View Project 
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="contact" class="contact section">
             <div class="container">
-                <h2 class="section-title reveal">Get in Touch</h2>
-                <div class="form-container reveal">
-                    <form id="contact-form" action="mailto:your.email@example.com" method="POST" enctype="text/plain">
-                        <div class="input-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                <h2 class="section-title reveal text-center mb-5">Get in Touch</h2>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 reveal">
+                        <div class="form-container shadow-sm border p-4 p-md-5">
+                            <form id="contact-form" action="mailto:your.email@example.com" method="POST" enctype="text/plain">
+                                <div class="mb-4">
+                                    <label for="name" class="form-label text-uppercase small letter-spacing-1">Your Name</label>
+                                    <input type="text" class="form-control border-0 border-bottom rounded-0 px-0" id="name" name="name" required placeholder="John Doe">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="email" class="form-label text-uppercase small letter-spacing-1">Your Email</label>
+                                    <input type="email" class="form-control border-0 border-bottom rounded-0 px-0" id="email" name="email" required placeholder="john@example.com">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="message" class="form-label text-uppercase small letter-spacing-1">Message</label>
+                                    <textarea class="form-control border-0 border-bottom rounded-0 px-0" id="message" name="message" rows="5" required placeholder="How can I help you?"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-dark w-100 py-3 mt-3 rounded-pill text-uppercase letter-spacing-2">Send Message</button>
+                            </form>
                         </div>
-                        <div class="input-group">
-                            <label for="email">Your Email</label>
-                            <input type="email" id="email" name="email" required placeholder="john@example.com">
-                        </div>
-                        <div class="input-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required
-                                placeholder="How can I help you?"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+                    </div>
                 </div>
             </div>
         </section>
@@ -124,6 +308,9 @@
         <p>&copy; 2024 Muhammad. All Rights Reserved.</p>
     </footer>
 
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 65
